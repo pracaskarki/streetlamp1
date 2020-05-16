@@ -1,0 +1,1 @@
+web: gunicorn streetlamp.wsgi --log-file -
