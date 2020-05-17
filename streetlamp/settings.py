@@ -79,18 +79,11 @@ WSGI_APPLICATION = 'streetlamp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+DATABASE_URL = 'postgres://kdjdbksbfurjnc:95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27@ec2-34-230-149-169.compute-1.amazonaws.com:5432/dauubmmn5vba0a'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER' :'kdjdbksbfurjnc'
-        'NAME': 'pracas',
-        'PORT': 5432,
-        'PASSWORD': '
-95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27',
-        'HOST': ec2-34-230-149-169.compute-1.amazonaws.com,
+    dj_database_url.config(
+        default=config('DATABASE_URL')
 
-    }
 }
 
 
@@ -140,5 +133,6 @@ MEDIA_URL = 'images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
+import dj_database_url
 
-django_heroku.settings(locals())
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
