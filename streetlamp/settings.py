@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'store.apps.StoreConfig',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,14 @@ WSGI_APPLICATION = 'streetlamp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER' :'kdjdbksbfurjnc'
+        'NAME': 'dauubmmn5vba0a',
+        'PORT': 5432,
+        'PASSWORD': '
+95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27',
+
+
     }
 }
 
