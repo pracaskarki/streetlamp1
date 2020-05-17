@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'streetlamp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'USER' :'kdjdbksbfurjnc'
-        'NAME': 'dauubmmn5vba0a',
+        'NAME': 'pracas',
         'PORT': 5432,
         'PASSWORD': '
 95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27',
