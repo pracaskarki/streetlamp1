@@ -81,11 +81,10 @@ WSGI_APPLICATION = 'streetlamp.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASE_URL = 'postgres://kdjdbksbfurjnc:95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27@ec2-34-230-149-169.compute-1.amazonaws.com:5432/dauubmmn5vba0a'
 DATABASES = {
-    dj_database_url.config(
+    'default': dj_database_url.config(
         default=config('DATABASE_URL')
-
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
