@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'streetlamp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'streetlamp',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT':'',
+        'NAME' : 'dauubmmn5vba0a',
+        'USER': 'kdjdbksbfurjnc',
+        'PASSWORD': '95e5adcdf3b1106599a2b0f4f1eee9a192d2ffd1ce204ada012f24e06babbe27',
+        'HOST': 'ec2-34-230-149-169.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
